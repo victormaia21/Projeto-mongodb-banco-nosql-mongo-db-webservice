@@ -84,6 +84,8 @@ public class ClienteRecursos {
 		List<Cliente>list = serviço.aniversario(x);
 		return ResponseEntity.ok().body(list);
 	}
+	
+	
 			
 	
 	

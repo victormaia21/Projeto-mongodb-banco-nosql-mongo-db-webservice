@@ -7,8 +7,6 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.victor.projetopessoal.entities.dto.DepartamentoDtosemId;
-
 @Document
 public class Cliente implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -19,14 +17,14 @@ public class Cliente implements Serializable{
 	private String nome;
 	private double salario;
 	private Date aniversario;
+	private Departamento departament;
 	
-	
-	private DepartamentoDtosemId departament;
+
 	
 	public Cliente() {
 	}
 
-	public Cliente(String id, String nome, double salario, Date aniversario, DepartamentoDtosemId departament) {
+	public Cliente(String id, String nome, double salario, Date aniversario, Departamento departament) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -34,6 +32,8 @@ public class Cliente implements Serializable{
 		this.aniversario = aniversario;
 		this.departament = departament;
 	}
+	
+	
 
 	public String getId() {
 		return id;
@@ -67,11 +67,11 @@ public class Cliente implements Serializable{
 		this.aniversario = aniversario;
 	}
 
-	public DepartamentoDtosemId getDepartament() {
+	public Departamento getDepartament() {
 		return departament;
 	}
 
-	public void setDepartament(DepartamentoDtosemId departament) {
+	public void setDepartament(Departamento departament) {
 		this.departament = departament;
 	}
 	

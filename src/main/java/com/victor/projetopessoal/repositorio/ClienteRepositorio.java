@@ -18,4 +18,7 @@ public interface ClienteRepositorio extends MongoRepository<Cliente, String>{
 	
 	@Query("{ aniversario: { $eq: ?0 } }")
 	public List<Cliente>aniversarios(Date aniversarios);
+	
+	
+	
 }

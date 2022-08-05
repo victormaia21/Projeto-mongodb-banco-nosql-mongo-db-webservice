@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.victor.projetopessoal.entities.Cliente;
+import com.victor.projetopessoal.entities.Departamento;
 
 public class ClienteDto implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -14,7 +15,7 @@ public class ClienteDto implements Serializable{
 	private String nome;
 	private double salario;
 	private Date aniversario;
-	private DepartamentoDtosemId departament;
+	private Departamento departament;
 	
 	public ClienteDto() {
 	}
@@ -60,11 +61,11 @@ public class ClienteDto implements Serializable{
 		this.aniversario = aniversario;
 	}
 
-	public DepartamentoDtosemId getDepartament() {
+	public Departamento getDepartament() {
 		return departament;
 	}
 
-	public void setDepartament(DepartamentoDtosemId departament) {
+	public void setDepartament(Departamento departament) {
 		this.departament = departament;
 	}
 	

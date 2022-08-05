@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 
 import com.victor.projetopessoal.entities.Cliente;
 import com.victor.projetopessoal.entities.Departamento;
-import com.victor.projetopessoal.entities.dto.DepartamentoDtosemId;
 import com.victor.projetopessoal.repositorio.ClienteRepositorio;
 import com.victor.projetopessoal.repositorio.DepartamentoRepositorio;
 
@@ -35,10 +34,10 @@ public class Instanciação implements CommandLineRunner{
 		repdep.saveAll(Arrays.asList(dep1,dep2,dep3));
 		
 		repcli.deleteAll();
-		Cliente c1 = new Cliente(null,"Victor maia", 3000, sdf.parse("31/03/2001"), new DepartamentoDtosemId(dep3));
-		Cliente c2 = new Cliente(null,"Kristyan maia", 5000, sdf.parse("02/06/1995"), new DepartamentoDtosemId(dep1));
-		Cliente c3 = new Cliente(null,"Krislla maia", 6000, sdf.parse("21/09/1992"), new DepartamentoDtosemId(dep2));
-		Cliente c4 = new Cliente(null,"Carlos souza", 2000, sdf.parse("12/07/2001"), new DepartamentoDtosemId(dep3));
+		Cliente c1 = new Cliente(null,"Victor maia", 3000, sdf.parse("31/03/2001"), dep3);
+		Cliente c2 = new Cliente(null,"Kristyan maia", 5000, sdf.parse("02/06/1995"), dep1);
+		Cliente c3 = new Cliente(null,"Krislla maia", 6000, sdf.parse("21/09/1992"), dep2);
+		Cliente c4 = new Cliente(null,"Carlos souza", 2000, sdf.parse("12/07/2001"), dep3);
 
 		repcli.saveAll(Arrays.asList(c1,c2,c3,c4));
 		
